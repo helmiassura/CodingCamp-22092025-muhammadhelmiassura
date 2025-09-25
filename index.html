@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechVision Solutions</title>
+
+  <link href="assets/img/rocket.png" rel="icon">
+  <link href="assets/img/rocket.png" rel="apple-touch-icon">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>
+          <img src="assets/img/rocket.png" alt="Rocket Icon" class="icon">
+          TechVision
+        </h2>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="profile.html" class="nav-link">Our Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="portofolio.html" class="nav-link">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Message Us</a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="hero-slideshow">
+      <div class="slide active" style="background-image: url('assets/img/img4.jpg')"></div>
+      <div class="slide" style="background-image: url('assets/img/bg-profile-dark.webp')"></div>
+      <div class="slide" style="background-image: url('assets/img/bg-profile-light.webp')"></div>
+      <div class="slide" style="background-image: url('assets/img/moon.webp')"></div>
+    </div>
+
+    <div class="slideshow-controls">
+      <button class="slide-btn prev-btn" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slide-btn next-btn" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <div class="slide-indicators">
+      <span class="indicator active" data-slide="0"></span>
+      <span class="indicator" data-slide="1"></span>
+      <span class="indicator" data-slide="2"></span>
+      <span class="indicator" data-slide="3"></span>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="welcome-message">
+          <h1 id="welcomeText">Hi Guest, Welcome To Website</h1>
+          <p>Ini adalah latihan website pertama</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-overlay"></div>
+  </section>
+
+
+  <!-- Our Headquarter -->
+  <section id="quarter" class="quarter-section">
+    <div class="container">
+      <h2>Our Headquarter</h2>
+      <div class="quarter-grid">
+        <div class="quarter-card">
+          <div class="overlay">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Jakarta</h3>
+          </div>
+        </div>
+        <div class="quarter-card">
+          <div class="overlay">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Bandung</h3>
+          </div>
+        </div>
+        <div class="quarter-card">
+          <div class="overlay">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Surabaya</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="floating-elements">
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+      <div class="floating-element"></div>
+    </div>
+
+    <div class="container">
+      <div class="section-title">
+        <h2>Message Us</h2>
+        <p class="subtitle">Ready to transform your ideas into reality? Let's start a conversation and create something
+          extraordinary together.</p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p class="description">Have a project in mind? We're here to help you achieve your goals.</p>
+
+          <div class="contact-items">
+            <div class="contact-item" onclick="copyToClipboard('+62 812 8227 3092')">
+              <i class="fas fa-phone"></i>
+              <span>+62 812 8227 3092</span>
+            </div>
+            <div class="contact-item" onclick="copyToClipboard('helmi.lf123@gmail.com')">
+              <i class="fas fa-envelope"></i>
+              <span>helmi.lf123@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Jakarta, Indonesia</span>
+            </div>
+            <div class="contact-item" onclick="window.open('https://wa.me/6281282273092', '_blank')">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp: +62 812 8227 3092</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="messageForm">
+          <div class="form-content">
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+              <i class="fas fa-check-circle"></i>
+              Pesan Anda berhasil dikirim! Kami akan menghubungi Anda segera.
+            </div>
+
+            <!-- Nama -->
+            <div class="form-group">
+              <label for="name">Nama Lengkap *</label>
+              <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+              <span class="error-message" id="nameError"></span>
+            </div>
+
+            <!-- Tanggal Lahir -->
+            <div class="form-group">
+              <label for="birthdate">Tanggal Lahir *</label>
+              <input type="date" id="birthdate" name="birthdate" required>
+              <span class="error-message" id="birthdateError"></span>
+            </div>
+
+            <!-- Jenis Kelamin -->
+            <div class="form-group">
+              <label>Jenis Kelamin *</label>
+              <div class="gender-options">
+                <label><input type="radio" name="gender" value="Laki-laki" required> Male</label>
+                <label><input type="radio" name="gender" value="Perempuan" required> Female</label>
+              </div>
+              <span class="error-message" id="genderError"></span>
+            </div>
+
+            <!-- Pesan -->
+            <div class="form-group">
+              <label for="message">Pesan *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-primary">
+              <span>Kirim Pesan</span>
+              <i class="fas fa-paper-plane" style="margin-left: 10px;"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="submitModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="submitResult"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>
+            <img src="assets/img/rocket.png" alt="Rocket Icon" class="iconfooter">
+            TechVision
+          </h3>
+          <p>Transforming ideas into digital reality with innovative solutions.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="profile.html">Our Profile</a></li>
+            <li><a href="portofolio.html">Portfolio</a></li>
+            <li><a href="#contact">Message Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TechVision Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

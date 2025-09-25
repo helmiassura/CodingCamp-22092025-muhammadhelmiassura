@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - TechVision Solutions</title>
+
+  <link href="assets/img/rocket.png" rel="icon">
+  <link href="assets/img/rocket.png" rel="apple-touch-icon">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>
+          <img src="assets/img/rocket.png" alt="Rocket Icon" class="icon">
+          TechVision
+        </h2>
+      </div>
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="profile.html" class="nav-link">Our Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="portofolio.html" class="nav-link active">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html#contact" class="nav-link">Message Us</a>
+        </li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- hero-portofolio Section -->
+  <section class="hero-portofolio">
+    <div class="container">
+      <h2>Our Portfolio</h2>
+      <p>Explore our collection of successful projects and innovative solutions that have helped businesses transform
+        digitally.</p>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn" data-filter="cloud">Cloud Solutions</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="web">
+          <div class="portfolio-image">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <div class="portfolio-content">
+            <h3>E-Commerce Platform</h3>
+            <p>A comprehensive online shopping platform with advanced features including payment gateway integration,
+              inventory management, and customer analytics.</p>
+            <div class="portfolio-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <a href="#" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="mobile">
+          <div class="portfolio-image">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <div class="portfolio-content">
+            <h3>Healthcare Mobile App</h3>
+            <p>A mobile application for healthcare management with features like appointment scheduling, medical
+              records, and telemedicine capabilities.</p>
+            <div class="portfolio-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">API Integration</span>
+            </div>
+            <a href="#" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="cloud">
+          <div class="portfolio-image">
+            <i class="fas fa-server"></i>
+          </div>
+          <div class="portfolio-content">
+            <h3>Cloud Migration Project</h3>
+            <p>Complete migration of enterprise infrastructure to AWS cloud with improved scalability, security, and
+              cost optimization.</p>
+            <div class="portfolio-tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Kubernetes</span>
+            </div>
+            <a href="#" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="web">
+          <div class="portfolio-image">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="portfolio-content">
+            <h3>Learning Management System</h3>
+            <p>A comprehensive LMS platform for educational institutions with course management, student tracking, and
+              interactive learning tools.</p>
+            <div class="portfolio-tags">
+              <span class="tag">Laravel</span>
+              <span class="tag">Vue.js</span>
+              <span class="tag">MySQL</span>
+            </div>
+            <a href="#" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="mobile">
+          <div class="portfolio-image">
+            <i class="fas fa-car"></i>
+          </div>
+          <div class="portfolio-content">
+            <h3>Ride Sharing App</h3>
+            <p>A complete ride-sharing solution with real-time tracking, payment integration, and driver-passenger
+              matching algorithms.</p>
+            <div class="portfolio-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Google Maps</span>
+              <span class="tag">Payment Gateway</span>
+            </div>
+            <a href="#" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="portfolio-item" data-category="web">
+          <div class="portfolio-image">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <div class="portfolio-content">
+            <h3>Business Analytics Dashboard</h3>
+            <p>An interactive dashboard for business intelligence with real-time data visualization and advanced
+              reporting capabilities.</p>
+            <div class="portfolio-tags">
+              <span class="tag">React</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">Python</span>
+            </div>
+            <a href="#" class="portfolio-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section">
+    <div class="container">
+      <h2>Our Achievements</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">150+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">80+</span>
+          <span class="stat-label">Happy Clients</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>
+            <img src="assets/img/rocket.png" alt="Rocket Icon" class="iconfooter">
+            TechVision
+          </h3>
+          <p>Transforming ideas into digital reality with innovative solutions.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Our Profile</a></li>
+            <li><a href="portofolio.html">Portfolio</a></li>
+            <li><a href="index.html#contact">Message Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TechVision Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert2/11.10.1/sweetalert2.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
